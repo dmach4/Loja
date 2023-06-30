@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Machado</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+    <!------------------------------- MODELOS PAGINA--------------------------->
+    <div class="modelo-clone">
+        <div class="pizza-item">
+            <a href=" ">
+              <div class="pizza-item--img"><img src=" "/></div>
+              <div class="pizza-item--add">+</div>
+            </a>
+            <div class="pizza-item--price">R$</div>
+            <div class="pizza-item--name">----</div>
+            <div class="pizza-item--desc">----</div>
+        </div>
+        <!---------------------- PRODUTOS PEDIDO (PAGINA) ------------------>
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">----</div>
+            <div class="cart--item--qtarea">
+              <button class="cart--item-qtmenos">-</button>
+              <div class="cart--item--qt">1</div>
+              <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+    </div>
+    <!--------------------------- MENU QUE APARECE NO CELULAR -------------------->
+    <header>
+        <h1>Loja da LAF</h1>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+    <!-------------------------------- CONTEUDO PRINCIPAL -------------------------->
+    <main>
+        <h2>PRODUTOS</h2>
+        <div class="pizza-area"></div>
+    </main>
+    <!----------------------------- PRODUTOS NO CARRINHO CELULAR ------------------->
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>PEDIDOS:</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                  <span>Subtotal</span>
+                  <span>R$</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                  <span>Desconto</span>
+                  <span>R$</span>
+                </div>
+                <div class="cart--totalitem total big">
+                  <span>Total</span>
+                  <span>R$</span>
+                </div>
+                <div class="cart--finalizar">ENVIAR PEDIDO</div>
+            </div>
+        </div>
+    </aside>
+    <!--------------------------------- JANELA DE COMPRA ------------------------------------->
+    <div class="pizzaWindowArea">
+        <div class="pizzaWindowBody">
+            <div class="pizzaBig">
+                <img src=""/>
+            </div>
+            <div class="pizzaInfo">
+                <h1>-----</h1>
+                <div class="pizzaInfo--desc">--</div>
+                <div class="pizzaInfo--sizearea">
+                    <div class="pizzaInfo--sector">MODELO:</div>
+                    <div class="pizzaInfo--sizes">
+                      <div data-key="1" class="pizzaInfo--size selected"><span>-----</span></div>
+                      <div data-key="2" class="pizzaInfo--size"><span>-----</span></div>
+                      <div data-key="3" class="pizzaInfo--size"><span>----</span></div>
+                      <div data-key="4" class="pizzaInfo--size"><span>----</span></div>
+                      <div data-key="5" class="pizzaInfo--size"><span>----</span></div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--pricearea">
+                    <div class="pizzaInfo--sector">PREÇO:</div>
+                    <div class="pizzaInfo--price">
+                      <div class="pizzaInfo--actualPrice">R$</div>
+
+                      <div class="pizzaInfo--qtarea">
+                          <button class="pizzaInfo--qtmenos">-</button>
+                          <div class="pizzaInfo--qt">1</div>
+                          <button class="pizzaInfo--qtmais">+</button>
+                      </div>
+
+                    </div>
+                </div>
+                <div class="pizzaInfo--addButton">COMPRAR</div>
+                <div class="pizzaInfo--cancelButton">CANCELAR</div>
+            </div>
+        </div>
+    </div>
+    <script src="json.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
