@@ -11,7 +11,7 @@ const formatoMonetario = (valor) => {
     }
 }
 function Vibra(){
-    navigator.vibrate(500);
+    navigator.vibrate(200);
 }
 
 const abrirModal = ( ) => {
