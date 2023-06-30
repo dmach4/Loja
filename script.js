@@ -10,19 +10,23 @@ const formatoMonetario = (valor) => {
         return valor.toFixed(2);
     }
 }
-const abrirModal = ( ) => {
+function Vibra(){
     navigator.vibrate(500);
+}
+
+const abrirModal = ( ) => {
+    Vibra();
     document.querySelector('.pizzaWindowArea').style.opacity = '0';
     document.querySelector('.pizzaWindowArea').style.display = 'flex';
     setTimeout(( ) => document.querySelector('.pizzaWindowArea').style.opacity = 1, 300);
 }
 const fecharModal = ( ) => {
-    navigator.vibrate(500);
+    Vibra();
     document.querySelector('.pizzaWindowArea').style.opacity = '0';
     setTimeout(( ) => document.querySelector('.pizzaWindowArea').style.display = 'none', 500);
 }
 const botoesFechar = ( ) => {
-    navigator.vibrate(500);
+    Vibra();
     document.querySelectorAll('.pizzaInfo--cancelButton').forEach( (item) => 
                                  item.addEventListener('click', fecharModal) );
 }
@@ -137,7 +141,7 @@ const adicionarNoCarrinho = ( ) => {
     })
 }
 const abrirCarrinho = ( ) => {
-    navigator.vibrate(500);
+    Vibra();
     if(cart.length > 0) {        
 	    document.querySelector('aside').classList.add('show');         // mostrar o carrinho
         document.querySelector('header').style.display = 'flex';       // mostrar barra superior
@@ -152,7 +156,7 @@ const abrirCarrinho = ( ) => {
 }
 const fecharCarrinho = ( ) => {
     // fechar o carrinho com o botão X no modo mobile
-    navigator.vibrate(500);
+    Vibra();
     document.querySelector('.menu-closer').addEventListener('click', () => {
         document.querySelector('aside').style.left = '100vw';       //ficara fora da tela
         document.querySelector('header').style.display = 'flex';
@@ -160,7 +164,7 @@ const fecharCarrinho = ( ) => {
 }
 const atualizarCarrinho = ( ) => {
     // exibir número de itens no carrinho
-    navigator.vibrate(500);
+    Vibra();
 	document.querySelector('.menu-openner span').innerHTML = cart.length;
 	
 	// mostrar ou nao o carrinho
