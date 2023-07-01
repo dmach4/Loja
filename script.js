@@ -10,25 +10,24 @@ const formatoMonetario = (valor) => {
         return valor.toFixed(2);
     }
 }
-function Vibra(){
+function Vibra( ){
     navigator.vibrate(200);
 }
-
 const abrirModal = ( ) => {
-    Vibra();
+    Vibra( );
     document.querySelector('.pizzaWindowArea').style.opacity = '0';
     document.querySelector('.pizzaWindowArea').style.display = 'flex';
     setTimeout(( ) => document.querySelector('.pizzaWindowArea').style.opacity = 1, 300);
 }
 const fecharModal = ( ) => {
-    Vibra();
+    Vibra( );
     document.querySelector('.pizzaWindowArea').style.opacity = '0';
     setTimeout(( ) => document.querySelector('.pizzaWindowArea').style.display = 'none', 500);
 }
 const botoesFechar = ( ) => {
-    Vibra();
+    Vibra( );
     document.querySelectorAll('.pizzaInfo--cancelButton').forEach( (item) => 
-                                 item.addEventListener('click', fecharModal) );
+    item.addEventListener('click', fecharModal) );
 }
 //------------------------ TELA PRODUTOS SETA ATRIBUTOS GERAL -------------------------------------------
 const preencheDadosDasPizzas = (pizzaItem, item, index) => {
@@ -46,7 +45,7 @@ const preencheDadosModal = (item) => {
     document.querySelector('.pizzaInfo--actualPrice').innerHTML = formatoReal(item.price[0]);
 }
 const pegarKey = (e) => {
-    // PEGAR JALOR DO ATRIBUTO DATA-KEY
+    // PEGAR VALOR DO ATRIBUTO DATA-KEY
     let key = e.target.closest('.pizza-item').getAttribute('data-key');
 
     // QUANTIDADE INICIAL EM 1
@@ -74,12 +73,10 @@ const escolherTamanhoPreco = (key) => {
     document.querySelectorAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
         size.addEventListener('click', (e) => {
             // clicou em um item, tirar a selecao dos outros e marca o q vc clicou
-            // tirar a selecao de tamanho atual e selecionar o tamanho grande
             document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
-            // marcar o que vc clicou, ao inves de usar e.target use size, pois ele é nosso item dentro do loop
             size.classList.add('selected');
 
-            // mudar o preço de acordo com o tamanho
+            // MUDA O VALOR DE ACORDO COM  O SIZE
             document.querySelector('.pizzaInfo--actualPrice').innerHTML =formatoReal(lafJson[key].price[sizeIndex]);
         })
     })
@@ -106,10 +103,7 @@ const adicionarNoCarrinho = ( ) => {
 
     	// tamanho
 	    let size = document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key');
-	    console.log("Tamanho " + size);
 
-	    // quantidade
-    	console.log("Quant. " + quantPizzas);
         // preco
         let price = document.querySelector('.pizzaInfo--actualPrice').innerHTML.replace('R$&nbsp;', '');
     
@@ -141,7 +135,7 @@ const adicionarNoCarrinho = ( ) => {
     })
 }
 const abrirCarrinho = ( ) => {
-    Vibra();
+    Vibra( );
     if(cart.length > 0) {        
 	    document.querySelector('aside').classList.add('show');         // mostrar o carrinho
         document.querySelector('header').style.display = 'flex';       // mostrar barra superior
@@ -155,8 +149,8 @@ const abrirCarrinho = ( ) => {
     })
 }
 const fecharCarrinho = ( ) => {
-    // fechar o carrinho com o botão X no modo mobile
-    Vibra();
+    // FECHAR CARRINHO COM X CELULAR
+    Vibra( );
     document.querySelector('.menu-closer').addEventListener('click', () => {
         document.querySelector('aside').style.left = '100vw';       //ficara fora da tela
         document.querySelector('header').style.display = 'flex';
@@ -164,7 +158,7 @@ const fecharCarrinho = ( ) => {
 }
 const atualizarCarrinho = ( ) => {
     // exibir número de itens no carrinho
-    Vibra();
+    Vibra( );
 	document.querySelector('.menu-openner span').innerHTML = cart.length;
 	
 	// mostrar ou nao o carrinho
