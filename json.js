@@ -1,23 +1,23 @@
 let lafJson = [
   { id: 1,
-    name: 'Regulador.',
+    name: 'Regulador 200.',
     img: 'images/02.png',
-    price: [200.00, 400.00,300.00,555.00,666.00],
-    sizes: ['GLP','ARGONIO','OXIGENIO','ACETILENO','DANIEL'],
+    price: ['200.00'],
+    sizes: ['LA2200'],
     description: 'Regulador de Pressão para Oxigênio, Corpo em Latão Usinado, Sistema de Pistão'},
 
   { id: 2,
-    name: 'Maçarico.',
+    name: 'Maçarico 201.',
     img: 'images/02.png',
-    price: [123.00, 123.00],
-    sizes: ['LA2201','LA2200',' ',' ',' '],
+    price: ['123.00'],
+    sizes: ['LA2201'],
     description: 'Maçarico de Solda Modelo Dourado LA200'},
 
   { id: 3,
-    name: 'Regulador.',
+    name: 'Maçarico 200.',
     img: 'images/02.png',
-    price: [300.00, 111.00,123.00],
-    sizes: ['Primeiro','Segundo','Terceiro',' ',' '],
+    price: ['300.00'],
+    sizes: ['Primeiro'],
     description: 'Regulador de Pressão para Oxigênio, Corpo em Latão Usinado, Sistema de Pistão'}
 
 
