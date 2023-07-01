@@ -61,7 +61,7 @@ const preencherTamanhos = (key) => {
     // TIRA A SELEÇÃO ATUAL
     document.querySelector('.pizzaInfo--size.selected').classList.remove('selected')
 
-    // selecionar todos os tamanhos
+    // SELECIONA OS SIZESS
     document.querySelectorAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
         // SELECIONA O PRIMEIRO ARRAY
         (sizeIndex == 0) ? size.classList.add('selected') : '';
