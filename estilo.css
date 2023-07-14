@@ -112,7 +112,7 @@ h1, h2 {
     transition:all ease .4s;
 }
 .pizza-item a:hover .pizza-item--add {
-    background-color:#b71c1c;
+    background-color:blue;
 }
 .pizza-item--price {
     font-size:15px;
@@ -191,29 +191,15 @@ h1, h2 {
 .pizzaInfo--sizes {
     display:inline-flex;
     border-radius:10px;
-    /* overflow:hidden; */
 }
 .pizzaInfo--size {
     color:black;
-    background-color:#EEE;
     font-size:23px;
-    margin: 5px;
     font-weight: bold;
-    cursor:pointer;
-}
-.pizzaInfo--size:hover {
-    background-color:#CCC;
-}
-.pizzaInfo--size.selected {
-    background-color:#d32f2f;
-    color:#FFF;
-}
-.pizzaInfo--size.selected span {
-    color:#D6D6D6;
 }
 .pizzaInfo--size span {
     font-size:12px;
-    color:#999;
+    color:#230885;
     font-weight: normal;
 }
 .pizzaInfo--price {
