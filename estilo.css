@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
-
 *{
     box-sizing: border-box;
 }
@@ -197,7 +196,6 @@ h1, h2 {
     font-size:23px;
     font-weight: bold;
 }
-
 .pizzaInfo--size span {
     font-size:12px;
     color:#230885;
