@@ -57,10 +57,7 @@ const pegarKey = (e) => {
     return key;
 }
 const preencherTamanhos = (key) => {
-    // TIRA A SELEÇÃO ATUAL
-    document.querySelector('.pizzaInfo--size.selected').classList.remove('selected')
-
-    // SELECIONA OS SIZESS
+    // SELECIONA OS SIZES
     document.querySelectorAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
         // SELECIONA O PRIMEIRO ARRAY
         (sizeIndex == 0) ? size.classList.add('selected') : '';
