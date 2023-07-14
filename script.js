@@ -47,20 +47,17 @@ const preencheDadosModal = (item) => {
 const pegarKey = (e) => {
     // PEGAR VALOR DO ATRIBUTO DATA-KEY
     let key = e.target.closest('.pizza-item').getAttribute('data-key');
-
     // QUANTIDADE INICIAL EM 1
     quantPizzas = 1;
-
     // MANTER AS INFORMAÇÕES QUE CLICOU
     modalKey = key;
-
     return key;
 }
 const preencherTamanhos = (key) => {
     // SELECIONA OS SIZES
     document.querySelectorAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
         // SELECIONA O PRIMEIRO ARRAY
-        (sizeIndex == 0) ? size.classList.add('selected') : '';
+        (sizeIndex == 0) ? size.classList.add('selected') : ' ';
         size.querySelector('span').innerHTML = lafJson[key].sizes;
     })
 }
@@ -79,10 +76,6 @@ const mudarQuantidade = ( ) => {
 }
 const adicionarNoCarrinho = ( ) => {
     document.querySelector('.pizzaInfo--addButton').addEventListener('click', ( ) => {
-
-        // pegar dados da janela modal atual
-    	// qual pizza? pegue o modalKey para usar lafJson[modalKey]
-    	console.log("Pizza " + modalKey);
 
     	// tamanho
 	    let size = document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key');
@@ -124,7 +117,7 @@ const abrirCarrinho = ( ) => {
         document.querySelector('header').style.display = 'flex';       // mostrar barra superior
     }
     // exibir aside do carrinho no modo mobile
-    document.querySelector('.menu-openner').addEventListener('click', () => {
+    document.querySelector('.menu-openner').addEventListener('click', ( ) => {
         if(cart.length > 0) {
             document.querySelector('aside').classList.add('show');
             document.querySelector('aside').style.left = '0';
@@ -151,7 +144,7 @@ const atualizarCarrinho = ( ) => {
 		document.querySelector('aside').classList.add('show');
 
 		// zerar meu .cart para nao fazer insercoes duplicadas
-		document.querySelector('.cart').innerHTML = '';
+		document.querySelector('.cart').innerHTML = ' ';
 
         // crie as variaveis antes do for
 		let subtotal = 0;
@@ -162,7 +155,6 @@ const atualizarCarrinho = ( ) => {
 		for(let i in cart) {
 			// PEGAR ITENS PELO ID
 			let pizzaItem = lafJson.find( (item) => item.id == cart[i].id );
-			console.log(pizzaItem);
 
             // em cada item pegar o subtotal
         	subtotal += cart[i].price * cart[i].qt;
@@ -173,7 +165,7 @@ const atualizarCarrinho = ( ) => {
 
 			let pizzaSizeName = cart[i].size;
 
-			let pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
+			let pizzaName = `${pizzaItem.name}`;
 
 			// preencher as informacoes
 			cartItem.querySelector('img').src = pizzaItem.img;
