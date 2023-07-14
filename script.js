@@ -35,7 +35,7 @@ const preencheDadosDasPizzas = (pizzaItem, item, index) => {
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
     pizzaItem.querySelector('.pizza-item--price').innerHTML = formatoReal(item.price[0]);
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
-    pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+    // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 }
 //------------------------ TELA CARRINHO SETA ATRIBUTOS GERAL -------------------------------------------
 const preencheDadosModal = (item) => {
@@ -64,21 +64,7 @@ const preencherTamanhos = (key) => {
     document.querySelectorAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
         // SELECIONA O PRIMEIRO ARRAY
         (sizeIndex == 0) ? size.classList.add('selected') : '';
-        size.querySelector('span').innerHTML = lafJson[key].sizes[sizeIndex];
-    })
-}
-const escolherTamanhoPreco = (key) => {
-    // Ações nos botões de tamanho
-    // selecionar todos os tamanhos
-    document.querySelectorAll('.pizzaInfo--size').forEach((size, sizeIndex) => {
-        size.addEventListener('click', (e) => {
-            // clicou em um item, tirar a selecao dos outros e marca o q vc clicou
-            document.querySelector('.pizzaInfo--size.selected').classList.remove('selected');
-            size.classList.add('selected');
-
-            // MUDA O VALOR DE ACORDO COM  O SIZE
-            document.querySelector('.pizzaInfo--actualPrice').innerHTML =formatoReal(lafJson[key].price[sizeIndex]);
-        })
+        size.querySelector('span').innerHTML = lafJson[key].sizes;
     })
 }
 const mudarQuantidade = ( ) => {
