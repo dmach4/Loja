@@ -322,6 +322,7 @@ h1, h2 {
 }
 .cart--finalizar:hover {
     background-color:#35af4a;
+    color: #230885;
 }
 /* ----------------------- TELA DO CELULAR ----------------------------------------*/
 @media (max-width:1000px) {
