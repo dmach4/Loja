@@ -226,7 +226,7 @@ h1, h2 {
 }
 .pizzaInfo--qt {
     line-height: 30px;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
     padding: 0px 5px;
     color:#000;
@@ -323,7 +323,7 @@ h1, h2 {
 .cart--finalizar:hover {
     background-color:#35af4a;
 }
-/* ----------------------- TELA DO CELULAR ----------------------------------*/
+/* ----------------------- TELA DO CELULAR ----------------------------------------*/
 @media (max-width:1000px) {
     .pizza-area {
         grid-template-columns: repeat(2, 1fr);
@@ -373,7 +373,7 @@ h1, h2 {
         margin:0;
     }
     .pizzaBig img {
-        width: 75%;
+        width: 80%;
         height: auto;
     }
     .pizzaInfo h1 {
@@ -383,8 +383,8 @@ h1, h2 {
         height:60px;
     }    
     .pizzaInfo--qtarea button {
-        font-size:25px;
-        padding:0px 25px;
+        font-size:30px;
+        padding:0px 30px;
     }
     .pizzaInfo--qt {
         line-height: 60px;

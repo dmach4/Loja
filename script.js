@@ -29,7 +29,7 @@ const botoesFechar = ( ) => {
     document.querySelectorAll('.pizzaInfo--cancelButton').forEach( (item) => 
     item.addEventListener('click', fecharModal) );
 }
-//------------------------ TELA PRODUTOS SETA ATRIBUTOS GERAL -------------------------------------------
+//------------------------ TELA PRODUTOS SETA ATRIBUTOS GERAL ----------------------------------
 const preencheDadosDasPizzas = (pizzaItem, item, index) => {
 	pizzaItem.setAttribute('data-key', index);
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
@@ -37,7 +37,7 @@ const preencheDadosDasPizzas = (pizzaItem, item, index) => {
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
     // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 }
-//------------------------ TELA CARRINHO SETA ATRIBUTOS GERAL -------------------------------------------
+//------------------------ TELA CARRINHO SETA ATRIBUTOS GERAL ----------------------------------
 const preencheDadosModal = (item) => {
     document.querySelector('.pizzaBig img').src = item.img;
     document.querySelector('.pizzaInfo h1').innerHTML = item.name;
@@ -81,7 +81,7 @@ const adicionarNoCarrinho = ( ) => {
 	    let size = document.querySelector('.pizzaInfo--size.selected').getAttribute('data-key');
 
         // preco
-        let price = document.querySelector('.pizzaInfo--actualPrice').innerHTML.replace('R$&nbsp;', '');
+        let price = document.querySelector('.pizzaInfo--actualPrice').innerHTML.replace('R$&nbsp;','');
     
         // crie um identificador que junte id e tamanho
 	    // concatene as duas informacoes separadas por um símbolo, vc escolhe
@@ -128,7 +128,7 @@ const fecharCarrinho = ( ) => {
     // FECHAR CARRINHO COM X CELULAR
     Vibra( );
     document.querySelector('.menu-closer').addEventListener('click', () => {
-        document.querySelector('aside').style.left = '100vw';       //ficara fora da tela
+        document.querySelector('aside').style.left = '100vw';              //ficara fora da tela
         document.querySelector('header').style.display = 'flex';
     })
 }
