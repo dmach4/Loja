@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap');
 *{
     box-sizing: border-box;
+    text-decoration: none;
 }
 body{
-    background-color:#EEE;
+    background-color:#eeeeee;
     font-family:'Lato', Helvetica, Arial;
     font-size:15px;
     display:flex;
@@ -19,14 +20,14 @@ header {
     top:0;
     right:0;
     height:60px;
-    background-color:#d32f2f;
+    background-color:blue;
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
 header h1 {
     margin-left: 1rem;
-    color: #fff;
+    color: white;
 }
 .menu-openner {
     margin-right: 15px;
@@ -45,15 +46,15 @@ header h1 {
     display:none;
     font-size: 30px;
 }
-aside {
-    background-color:#ffcdd2;
+aside {   /* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
+    background-color:rgb(204, 204, 238);
     width:0vw;
     font-family:'Hepta Slab', Helvetica, Arial;
     transition:all ease .2s;
     overflow-x:hidden;
 }
 aside.show {
-    width:30vw;
+    width:45vw;
 }
 .cart--area {
     margin-top: 30px;
@@ -92,7 +93,7 @@ h1, h2 {
     height:200px;
     background-color:#EEE;
     border-radius:100px;
-    box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
+    box-shadow:10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 .pizza-item--img img {
     width:100%;
@@ -104,11 +105,11 @@ h1, h2 {
     border-radius:25px;
     background-color:green;
     text-align:center;
-    color:#FFF;
+    color: white;
     font-size:40px;
     cursor:pointer;
     margin-top:-25px;
-    transition:all ease .4s;
+    transition:all ease .6s;
 }
 .pizza-item a:hover .pizza-item--add {
     background-color:blue;
@@ -146,7 +147,7 @@ h1, h2 {
     width:900px;
     background-color:#FFF;
     border-radius:10px;
-    box-shadow:0px 0px 15px #999;
+    box-shadow:10px 10px 25px blue;
     display:flex;
     margin:20px 0px;
 }
@@ -255,7 +256,7 @@ h1, h2 {
     line-height: 40px;
     margin-bottom:30px;
 }
-.cart {
+.cart {      /* wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww */
     margin-bottom:20px;
 }
 .cart--item {
