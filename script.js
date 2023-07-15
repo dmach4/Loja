@@ -11,8 +11,19 @@ const formatoMonetario = (valor) => {
     }
 }
 function Vibra( ){
-    navigator.vibrate(200);
+    navigator.vibrate(100);
 }
+
+function imprimir( ){
+    const conteudo = document.querySelector('aside').innerHTML;
+     const opcao ={
+        filename: "LAF-Pedido.pdf",
+        html2canvas:{scala:2},
+        jsPDF:{unit:"mm", format: "a4", orientation: "portrait"}
+    };
+    html2pdf( ).set(opcao).from(conteudo).save( );
+}
+
 const abrirModal = ( ) => {
     Vibra( );
     document.querySelector('.pizzaWindowArea').style.opacity = '0';
@@ -35,7 +46,7 @@ const preencheDadosDasPizzas = (pizzaItem, item, index) => {
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
     pizzaItem.querySelector('.pizza-item--price').innerHTML = formatoReal(item.price[0]);
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
-          // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+    // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 }
 //------------------------ TELA CARRINHO SETA ATRIBUTOS GERAL ----------------------------------
 const preencheDadosModal = (item) => {
@@ -194,12 +205,10 @@ const atualizarCarrinho = ( ) => {
 			})
 			document.querySelector('.cart').append(cartItem);
 		}
-		// calcule desconto 10% e total
-		// desconto = subtotal * 0.1
-		desconto = subtotal * 0;
+		// calcule desconto % (0.1 = 10%)
+		desconto = subtotal * 0.03;
 		total = subtotal - desconto;
 
-		// exibir na tela os resultados
 		// selecionar o ultimo span do elemento
 		document.querySelector('.subtotal span:last-child').innerHTML = formatoReal(subtotal);
 		document.querySelector('.desconto span:last-child').innerHTML = formatoReal(desconto);
@@ -216,12 +225,16 @@ const finalizarCompra = ( ) => {
         document.querySelector('aside').classList.remove('show');
         document.querySelector('aside').style.left = '100vw';
         document.querySelector('header').style.display = 'flex';
+        Vibra( );
+        Vibra( );
+        imprimir( );
     })
 }
+
 // MAPEAR lafJson PARA GERAR O CLONE DA LISTA DE PRODUTOS
 lafJson.map((item, index ) => {
     let pizzaItem = document.querySelector('.modelo-clone .pizza-item').cloneNode(true);
-        document.querySelector('.pizza-area').append(pizzaItem);
+    document.querySelector('.pizza-area').append(pizzaItem);
 
     // preencher os dados de cada pizza
     preencheDadosDasPizzas(pizzaItem, item, index);
@@ -244,15 +257,28 @@ lafJson.map((item, index ) => {
 		// definir quantidade inicial como 1
 		document.querySelector('.pizzaInfo--qt').innerHTML = quantPizzas;
 
-        // selecionar o tamanho e preco com o clique no botao
-        escolherTamanhoPreco(chave);
     })
-    botoesFechar( );
+botoesFechar( );
 })
-
 mudarQuantidade( );
 adicionarNoCarrinho( );
 atualizarCarrinho( );
 fecharCarrinho( );
 finalizarCompra( );
 
+
+
+// function imprimir( ){
+
+//     const conteudo = document.querySelector('aside').innerHTML;
+
+//     const janela = window.open('', '', 'height=700, width=700');
+
+//     janela.document.write('<html><head>');
+//     janela.document.write('<link rel="stylesheet" href="estilo.css"/>');
+//     janela.document.write('</head>');
+//     janela.document.write('<body>');
+//     janela.document.write(conteudo);
+//     janela.document.write('</body></html>');
+//     janela.print( );
+// }
