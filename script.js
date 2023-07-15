@@ -35,7 +35,7 @@ const preencheDadosDasPizzas = (pizzaItem, item, index) => {
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
     pizzaItem.querySelector('.pizza-item--price').innerHTML = formatoReal(item.price[0]);
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
-    // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+          // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 }
 //------------------------ TELA CARRINHO SETA ATRIBUTOS GERAL ----------------------------------
 const preencheDadosModal = (item) => {
