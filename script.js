@@ -46,7 +46,6 @@ const preencheDadosDasPizzas = (pizzaItem, item, index) => {
     pizzaItem.querySelector('.pizza-item--img img').src = item.img;
     pizzaItem.querySelector('.pizza-item--price').innerHTML = formatoReal(item.price[0]);
     pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
-    // pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 }
 //------------------------ TELA CARRINHO SETA ATRIBUTOS GERAL ----------------------------------
 const preencheDadosModal = (item) => {
@@ -106,7 +105,7 @@ const adicionarNoCarrinho = ( ) => {
             // se encontrar aumente a quantidade
             cart[key].qt += quantPizzas;
         } else {
-            // adicionar objeto pizza no carrinho
+            // adicionar produto no carrinho
             let pizza = {
                 identificador,
                 id: lafJson[modalKey].id,
@@ -182,6 +181,10 @@ const atualizarCarrinho = ( ) => {
 			cartItem.querySelector('img').src = pizzaItem.img;
 			cartItem.querySelector('.cart--item-nome').innerHTML = pizzaName;
 			cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
+
+
+
+
 
 			// selecionar botoes + e -
 			cartItem.querySelector('.cart--item-qtmais').addEventListener('click', ( ) => {
@@ -265,20 +268,3 @@ adicionarNoCarrinho( );
 atualizarCarrinho( );
 fecharCarrinho( );
 finalizarCompra( );
-
-
-
-// function imprimir( ){
-
-//     const conteudo = document.querySelector('aside').innerHTML;
-
-//     const janela = window.open('', '', 'height=700, width=700');
-
-//     janela.document.write('<html><head>');
-//     janela.document.write('<link rel="stylesheet" href="estilo.css"/>');
-//     janela.document.write('</head>');
-//     janela.document.write('<body>');
-//     janela.document.write(conteudo);
-//     janela.document.write('</body></html>');
-//     janela.print( );
-// }
