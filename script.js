@@ -13,17 +13,15 @@ const formatoMonetario = (valor) => {
 function Vibra( ){
     navigator.vibrate(100);
 }
-
 function imprimir( ){
     const conteudo = document.querySelector('aside').innerHTML;
      const opcao ={
         filename: "LAF-Pedido.pdf",
-        html2canvas:{scala:2},
+        html2canvas:{scala:1},
         jsPDF:{unit:"mm", format: "a4", orientation: "portrait"}
     };
     html2pdf( ).set(opcao).from(conteudo).save( );
 }
-
 const abrirModal = ( ) => {
     Vibra( );
     document.querySelector('.pizzaWindowArea').style.opacity = '0';
@@ -233,7 +231,6 @@ const finalizarCompra = ( ) => {
         imprimir( );
     })
 }
-
 // MAPEAR lafJson PARA GERAR O CLONE DA LISTA DE PRODUTOS
 lafJson.map((item, index ) => {
     let pizzaItem = document.querySelector('.modelo-clone .pizza-item').cloneNode(true);
