@@ -13,6 +13,8 @@ const formatoMonetario = (valor) => {
 function Vibra( ){
     navigator.vibrate(100);
 }
+
+
 function imprimir( ){
     const conteudo = document.querySelector('aside').innerHTML;
      const opcao ={
@@ -21,6 +23,9 @@ function imprimir( ){
         jsPDF:{unit:"mm", format: "a4", orientation: "portrait"}
     };
     html2pdf( ).set(opcao).from(conteudo).save( );
+
+
+
 }
 const abrirModal = ( ) => {
     Vibra( );
